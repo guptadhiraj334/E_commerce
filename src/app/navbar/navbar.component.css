@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+input{
+    display: flex;
+    width: 400px;
+    border-radius: 8px;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+mat-icon{
+    display: flex;
+    position: relative;
+    right: 35px;
+    align-self: center;
+    background: transparent;
+}
+
+.btn button,button{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 500;
+   
+}
+.btn{
+    border: none;
+    outline: none;
+}
+
+mat-toolbar{
+    position: fixed;
+    z-index: 10;
+}
+
