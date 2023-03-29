@@ -1,27 +1,28 @@
-<!-- For Registration Form -->
-<!-- 
-<div class="card" *ngIf="!  sellerForm">
+<!-- For Registration Form  -->
+
+<div class="card" *ngIf="!sellerForm">
     <div class="row">
         <div class="col-md-6 ">
-            <div class="card-box ">
-                <h1 class="d-flex justify-content-center" style="font-weight: 500; ">Registration Here</h1> <hr>
+            <mat-card style="width: 350px;">
+                <h1 class="d-flex justify-content-center" style="font-weight: 500; ">Registration Here</h1>
+                <hr>
                 <form [formGroup]="registration">
                     <div class="my-3">
-                        <input type="text" class="form-control" placeholder="First Name" formControlName="fName">
-                    </div>
-                    <div class="my-3">
-                        <input type="text" class="form-control" placeholder="Larst Name" formControlName="lName">
+                        <input type="text" class="form-control" placeholder="Enter name" formControlName="name">
+
                     </div>
                     <div class="my-3">
                         <input type="email" class="form-control" placeholder="Email" formControlName="email">
+
                     </div>
-                    <div class="my-3">
+                    <!-- <div class="my-3">
                         <input type="text" class="form-control" placeholder="Number" formControlName="number">
-                    </div>
+                    </div> -->
                     <div class="my-3">
-                        <input type="password" class="form-control" placeholder="Password" formControlName="password">
+                        <input type="password" class="form-control" placeholder="Password" formControlName="pwd">
+
                     </div>
-                    <a style="font-weight: 600;" (click)="onLoginForm()">Already have an Account ? Login</a>
+                    <a style="font-weight: 550;" (click)="openSellerLogin()">Already have an Account ? Login</a>
                     <div class="my-2">
                         <button mat-raised-button color="primary" (click)="Submit()"> Submit</button>
                         <button mat-raised-button class="mx-3" style="background:red; color:white;" (click)="Reset()">
@@ -29,14 +30,14 @@
                         </button>
                     </div>
                 </form>
-            </div>
+            </mat-card>
         </div>
         <div class="col-md-6">
             <img src="https://media.istockphoto.com/id/1404053589/photo/a-shopping-cart-by-a-store-shelf-in-a-supermarket.webp?s=1024x1024&w=is&k=20&c=6BIB1IAwWkkOn-7CleZU_vGT-5rpSfELiCmuzf4G2eE="
                 width="600px" height="400px">
         </div>
     </div>
-</div> -->
+</div>
 
 
 
@@ -45,22 +46,28 @@
 
 <!-- For Login Form -->
 
-<div class="card" *ngIf="login">
+<div class="card" *ngIf="sellerForm" style="background: pink;">
     <div class="row">
         <div class="col-md-6">
-            <mat-card style="width: 300px; padding: 20px;" >
+            <mat-card style="width: 300px; padding: 20px;">
                 <mat-card-title class="d-flex justify-content-center">Login Here</mat-card-title>
+                <hr>
                 <form [formGroup]="LoginFrom">
                     <div class="my-3">
-                        <input type="text" placeholder="username" class="form-control" formControlName="username"  >
+                        <input type="text" placeholder="email" class="form-control" formControlName="email">
                     </div>
                     <div class="my-3">
                         <input type="text" placeholder="password" class="form-control" formControlName="pwd">
                     </div>
-                    <a href="" style="text-decoration: none; font-size: 16px;">New user? </a>
+                    <a (click)="openSellerSignup()" style=" font-size: 14px; font-weight: 550;">New user? </a>
                     <div class="my-3">
-                        <button mat-raised-button style="background-color:green; color: white;">Login</button>
-                        <button mat-raised-button style="background-color:red; color: white;" class="mx-3">Reset</button>
+                        <button mat-raised-button style="background-color:green; color: white;" (click)="loginSubmit()">
+                            Login
+                        </button>
+                        <button mat-raised-button style="background-color:red; color: white;" class="mx-3"
+                            (click)="loginReset()">
+                            Reset
+                        </button>
                     </div>
                 </form>
             </mat-card>

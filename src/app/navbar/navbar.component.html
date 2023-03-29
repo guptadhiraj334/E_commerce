@@ -1,19 +1,29 @@
 <div class="row">
-    <mat-toolbar>
-        <div class="col-md-2 mx-2">
-         <h1>Logo</h1>
-        </div>
-        <div class="col-md-6 d-flex justify-content-center">
-          <input type="text" placeholder="Search ...">
-          <button><mat-icon>search</mat-icon></button>
-        </div>
-        <div class="col-md-4 d-flex justify-content-center">
-          <div class="btn">
-            <button class="mx-2" routerLink="">Home</button>
-            <button class="mx-2" routerLink="/seller-auth">Seller</button>
-            <button class="mx-2">Login</button>
-            <button class="mx-2">Card</button>
-          </div>
-        </div>
-    </mat-toolbar>
+  <mat-toolbar style="background:rgb(255, 69, 100);">
+    <div class="col-md-2 mx-2">
+      <h1 style="font-size: 24px;">
+        <a routerLink="" style="color:white ; text-decoration: none;">
+          E-Commerce
+        </a>
+      </h1>
+    </div>
+    <div class="col-md-6 d-flex justify-content-center">
+      <input type="text" placeholder="Search ..." *ngIf="dataType==='default'">
+      <mat-icon *ngIf="dataType==='default'">search </mat-icon>
+    </div>
+    <div class="col-md-4 " [ngSwitch]="dataType">
+      <ul class="d-flex" *ngSwitchCase="'default'">
+        <li><a routerLink="">Home</a> </li>
+        <li><a routerLink="/seller-auth">Seller</a> </li>
+        <li><a >Login</a> </li>
+        <li><a >Card</a> </li>
+      </ul>
+      <ul class="d-flex" *ngSwitchCase="'seller'">
+        <li><a>Seller</a> </li>
+        <li><a routerLink="/seller-home" >Product list</a> </li>
+        <li><a routerLink="/add-product">Add </a> </li>
+        <li><a (click)="logOut()">Logout</a> </li>
+      </ul>
+    </div>
+  </mat-toolbar>
 </div>

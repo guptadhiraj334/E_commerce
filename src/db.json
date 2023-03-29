@@ -1,0 +1,113 @@
+{
+  "seller": [
+    {
+      "name": "Dhiraj",
+      "email": "guptadhiraj334@gmail.com",
+      "pwd": "Dhiraj@123"
+    },
+    {
+      "name": "Pawan",
+      "email": "pawan@gmail.com",
+      "pwd": "Pawan@123",
+      "id": 1
+    },
+    {
+      "name": null,
+      "email": null,
+      "number": null,
+      "pwd": null,
+      "id": 2
+    },
+    {
+      "name": "Mani",
+      "email": "mani@gmail.com",
+      "number": null,
+      "pwd": "Mani@123",
+      "id": 3
+    }
+  ],
+  "Login": [
+    {
+      "email": "guptadhiraj334@gmail.com",
+      "pwd": "Dhiraj@123"
+    },
+    {
+      "email": "Raju@gmail.com",
+      "pwd": "Raju@123",
+      "id": 1
+    },
+    {
+      "email": "Ankit@gmail.com",
+      "pwd": "Ankit@123",
+      "id": 2
+    },
+    {
+      "email": "guptadhiraj@gmail.com",
+      "pwd": "Dhiraj@123",
+      "id": 3
+    },
+    {
+      "email": "guptadhiraj@gmail.com",
+      "pwd": "Dhiraj@123",
+      "id": 4
+    },
+    {
+      "email": "mani@gmail.com",
+      "pwd": "Mani@123",
+      "id": 5
+    },
+    {
+      "email": "mani@gmail.com",
+      "pwd": "Mani@123",
+      "id": 6
+    },
+    {
+      "email": "mani@gmail.com",
+      "pwd": "Mani@123",
+      "id": 7
+    },
+    {
+      "email": null,
+      "pwd": null,
+      "id": 8
+    }
+  ],
+  "products": [
+    {
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "price": "109",
+      "description": "Your perfect pack for everyday use and walks in the forest",
+      "category": "men's clothing",
+      "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81mmaolsY5L._UX522_.jpg",
+      "count": "120",
+      "id": "1"
+    },
+    {
+      "title": "Mens Casual Premium Slim Fit T-Shirts",
+      "price": "400",
+      "description": "The Henley style round neckline includes a three-button placket.",
+      "category": "men's clothing",
+      "image": "http://sc04.alicdn.com/kf/Had3fe864318741b9958d4d7c61906b75j.jpg",
+      "count": "40",
+      "id": "2"
+    },
+    {
+      "title": "White sneaker on a blue gradient",
+      "price": "350",
+      "description": "Your perfect pack for everyday use and walks in the forest",
+      "category": "Men's sneaker",
+      "image": "https://media.istockphoto.com/id/1303978937/photo/white-sneaker-on-a-blue-gradient-background-mens-fashion-sport-shoe-sneakers-lifestyle.jpg?s=612x612&w=0&k=20&c=L725fuzFTnm6qEaqE7Urc5q6IR80EgYQEjBn_qtBIQg=",
+      "count": "12",
+      "id": "4"
+    },
+    {
+      "title": "Smart Watches",
+      "price": "3500",
+      "description": "Best Bluetooth Phone call watch under 5000 INR. HD AMOLED Display, Bluetooth Phone Calls, Blood-oxygen Saturation Measurement, Sports Modes,",
+      "category": "Electronic ",
+      "image": "https://cdn.shopify.com/s/files/1/0266/1371/0884/products/pop2_black_bt_call.png?v=1669725227",
+      "count": "15",
+      "id": "5"
+    }
+  ]
+}

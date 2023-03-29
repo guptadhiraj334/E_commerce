@@ -19,19 +19,19 @@ mat-icon{
     background: transparent;
 }
 
-.btn button,button{
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 18px;
-    font-weight: 500;
-   
-}
-.btn{
-    border: none;
-    outline: none;
+   ul li{
+    list-style: none;
 }
 
+ ul li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 550;
+    color: white;
+}
 mat-toolbar{
     position: fixed;
     z-index: 10;

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { SellerService } from 'src/app/Allservices/seller.service';
 
 @Component({
   selector: 'app-seller-auth',
@@ -7,45 +9,78 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./seller-auth.component.css']
 })
 export class SellerAuthComponent implements OnInit {
-  login=true;
-  sellerForm=false;
 
-  registration:FormGroup=new FormGroup({
-    fName:new FormControl('',[Validators.required]),
-    lName:new FormControl('',[Validators.required]),
-    email:new FormControl('',[Validators.required]),
-    number:new FormControl('',[Validators.required,Validators.maxLength(10)]),
-    password:new FormControl('',[Validators.required])
+   sellerForm = false;
+   getRes:any
+   name:any
+   submitStorage:any
+   data: any
+
+  registration: FormGroup = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required]),
+    number: new FormControl('', [Validators.required, Validators.minLength(10)]),
+    pwd: new FormControl('', [Validators.required])
   })
 
-  LoginFrom:FormGroup=new FormGroup({
-    username:new FormControl('',Validators.required),
-    pwd:new FormControl('',Validators.required)
+  LoginFrom: FormGroup = new FormGroup({
+    email: new FormControl('', Validators.required),
+    pwd: new FormControl('', Validators.required)
   })
- 
 
-  constructor() { }
 
-  onLoginForm(){
-   this.login=true
+  constructor(private seller: SellerService, private router: Router) { }
+
+  // For Registration form Submit and reset function
+
+  Submit() {
+    this.seller.SellerPost(this.registration.value).subscribe((res: any) => {
+      console.log(res);
+      this.seller.setToken(res);
+      this.submitStorage =this.seller.getToken();
+      //  this.getRes=JSON.parse(this.submitStorage)
+      console.log(this.submitStorage);
+    })
+
   }
 
-  Submit(){
-    console.log(this.registration.value);
-  }
 
-  Reset(){
+  Reset() {
     this.registration.reset()
   }
 
+  // For Login form Submit and reset function
+
+  loginSubmit() {
+    this.seller.SellerLogin(this.LoginFrom.value).subscribe((res:any)=>{ 
+      console.log(res) 
+      this.seller.loginSetLocalSrorage(res);
+      this.name=this.seller.loginGetLocalStorage();
+    });
+  }
+ 
+  loginReset() {
+    this.LoginFrom.reset();
+  }
+
+  //instead of RouterLink this  function used 
+  openSellerLogin() {
+    this.sellerForm = true;
+  }
+
+  openSellerSignup() {
+    this.sellerForm = false;
+  }
+
+  logOut(){
+    localStorage.clear();
+  }
 
 
   ngOnInit(): void {
-  
+
   }
 
 }
-function display() {
-  throw new Error('Function not implemented.');
-}
+
 

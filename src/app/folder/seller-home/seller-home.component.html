@@ -1,0 +1,33 @@
+<p>seller-home works!</p>
+
+<mat-card style="position: absolute;top: 15%;width: 100vw;" >
+    <table class="table table-bordered">
+        <thead>
+            <tr   >
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th >Description</th>
+                <th>Category</th>
+                <th>image</th>
+                <th>Count</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.id}} </td>
+                <td>{{product.title}} </td>
+                <td>{{product.price}} </td>
+                <td>{{product.description}} </td>
+                <td>{{product.category}} </td>
+                <td><img src="{{product.image}}" alt="" width="120px" height="150px"></td>
+                <td>{{product.count}}</td>
+                <td>
+                    <button mat-fab><mat-icon>delete</mat-icon> </button>
+                    <button mat-fab><mat-icon>update</mat-icon> </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</mat-card>
