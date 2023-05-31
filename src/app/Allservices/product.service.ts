@@ -1,32 +1,34 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { products } from '../folder/data-interface';
+import baseUrl from '../Helper/Helper';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
+
   constructor(private http:HttpClient) { }
 
   getProducts(){
-    return this.http.get<products[]>(`http://localhost:3000/products`);
+    return this.http.get<products[]>(`${baseUrl}/products`);
   }
 
   addpProducts(body:products){
-   return this.http.post(`http://localhost:3000/products`,body)
+   return this.http.post(`${baseUrl}/products`,body)
   }
 
   limitProduct(){
-    return this.http.get(` http://localhost:3000/products?_limit=3`)
+    return this.http.get(` ${baseUrl}/products?_limit=3`)
   }
 
   deleteProduct(id){
-    return this.http.delete(`http://localhost:3000/products/`+id)
+    return this.http.delete(`${baseUrl}/products/`+id)
   }
 
   getProductById(id:string){
-    return this.http.get<products[]>(`http://localhost:3000/products/${id}`)
+    return this.http.get<products[]>(`${baseUrl}/products/${id}`)
   }
 
   updateProduct(product:any,id:any){
