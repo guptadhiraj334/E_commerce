@@ -753,7 +753,9 @@ LoginComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductService", function() { return ProductService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _Helper_Helper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Helper/Helper */ "WQHQ");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+
 
 
 
@@ -762,19 +764,19 @@ class ProductService {
         this.http = http;
     }
     getProducts() {
-        return this.http.get(`http://localhost:3000/products`);
+        return this.http.get(`${_Helper_Helper__WEBPACK_IMPORTED_MODULE_1__["default"]}/products`);
     }
     addpProducts(body) {
-        return this.http.post(`http://localhost:3000/products`, body);
+        return this.http.post(`${_Helper_Helper__WEBPACK_IMPORTED_MODULE_1__["default"]}/products`, body);
     }
     limitProduct() {
-        return this.http.get(` http://localhost:3000/products?_limit=3`);
+        return this.http.get(` ${_Helper_Helper__WEBPACK_IMPORTED_MODULE_1__["default"]}/products?_limit=3`);
     }
     deleteProduct(id) {
-        return this.http.delete(`http://localhost:3000/products/` + id);
+        return this.http.delete(`${_Helper_Helper__WEBPACK_IMPORTED_MODULE_1__["default"]}/products/` + id);
     }
     getProductById(id) {
-        return this.http.get(`http://localhost:3000/products/${id}`);
+        return this.http.get(`${_Helper_Helper__WEBPACK_IMPORTED_MODULE_1__["default"]}/products/${id}`);
     }
     updateProduct(product, id) {
         return this.http.put(`http://localhost:3000/products/${id}`, product);
@@ -783,14 +785,14 @@ class ProductService {
         return this.http.get(`http://localhost:3000/products?q=${query}`);
     }
 }
-ProductService.ɵfac = function ProductService_Factory(t) { return new (t || ProductService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
+ProductService.ɵfac = function ProductService_Factory(t) { return new (t || ProductService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
 ProductService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: ProductService, factory: ProductService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ProductService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
         args: [{
                 providedIn: 'root'
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }]; }, null); })();
 
 
 /***/ }),
@@ -860,6 +862,21 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
                 styleUrls: ['./app.component.css']
             }]
     }], null, null); })();
+
+
+/***/ }),
+
+/***/ "WQHQ":
+/*!**********************************!*\
+  !*** ./src/app/Helper/Helper.ts ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const baseUrl = "https://ecom-backend-jsonserver.onrender.com";
+/* harmony default export */ __webpack_exports__["default"] = (baseUrl);
 
 
 /***/ }),
