@@ -1,0 +1,37 @@
+/* .card{
+    position: absolute;
+    top: 13%;
+} */
+
+.search-item {
+    width: 800px;
+    margin: 55px auto;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+
+.search-item img {
+    width: 100%;
+    object-fit: contain;
+    height: 200px;
+}
+
+.search-item h6{
+    color: blueviolet;
+    font-size: 24px;
+}
+
+.search-item p{
+    margin-bottom: 6px
+}
+
+.contain{
+    margin-top: 30px;
+    padding-top: 5px;
+}
+
+.contain p{
+  font-weight: 500;
+  font-size: 18px;
+}

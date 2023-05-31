@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ProductService } from 'src/app/Allservices/product.service';
 import { SellerService } from 'src/app/Allservices/seller.service';
 
@@ -17,19 +18,21 @@ export class AddProductComponent implements OnInit {
     category: new FormControl(''),
     image: new FormControl(''),
     count: new FormControl(''),
-    id:new FormControl('')
+    id: new FormControl('')
 
   })
 
-  constructor(private pro: ProductService) { }
+  constructor(private pro: ProductService, private route: Router) { }
 
   saveProduct() {
     this.pro.addpProducts(this.ProductForm.value).subscribe((res) => {
       console.log(res)
+      // this.route.navigate(['seller-home'])
+
     })
   }
 
-  reset(){
+  reset() {
     this.ProductForm.reset();
   }
 

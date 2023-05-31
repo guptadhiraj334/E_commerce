@@ -13,20 +13,20 @@ export class SellerService {
   return this.http.post(`http://localhost:3000/seller`,body);
   }
 
-  SellerLogin(body:Login){
-    return this.http.post(`http://localhost:3000/Login`,body)
+  SellerLogin(data:Login){
+    return this.http.get(`http://localhost:3000/seller?email=${data.email}&password=${data.pwd}`)
   }
 
   setToken(seller:string){
-    localStorage.setItem('seller details',JSON.stringify(seller));
+    localStorage.setItem('seller ',JSON.stringify(seller));
   }
 
   getToken(){
-    return JSON.parse(localStorage.getItem('seller'));
+    return JSON.parse(localStorage.getItem('seller '));
   }
 
   loginSetLocalSrorage(seller){
-    localStorage.setItem('seller pwd & email',JSON.stringify(seller));
+    localStorage.setItem('seller',JSON.stringify(seller));
   }
 
   loginGetLocalStorage(){

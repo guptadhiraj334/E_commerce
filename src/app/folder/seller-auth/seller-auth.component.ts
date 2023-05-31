@@ -6,15 +6,15 @@ import { SellerService } from 'src/app/Allservices/seller.service';
 @Component({
   selector: 'app-seller-auth',
   templateUrl: './seller-auth.component.html',
-  styleUrls: ['./seller-auth.component.css']
+  styleUrls: ['./seller-auth.component.css'],
+
 })
 export class SellerAuthComponent implements OnInit {
 
    sellerForm = false;
-   getRes:any
-   name:any
-   submitStorage:any
-   data: any
+   regPwd:string|number;
+   regEmail:string;
+
 
   registration: FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required]),
@@ -37,13 +37,12 @@ export class SellerAuthComponent implements OnInit {
     this.seller.SellerPost(this.registration.value).subscribe((res: any) => {
       console.log(res);
       this.seller.setToken(res);
-      this.submitStorage =this.seller.getToken();
-      //  this.getRes=JSON.parse(this.submitStorage)
-      console.log(this.submitStorage);
+      let data = this.seller.getToken();
+      // console.log('get data from local storage',data.email);
+      this.regEmail=data.email;
+      this.regPwd=data.pwd; 
     })
-
   }
-
 
   Reset() {
     this.registration.reset()
@@ -53,9 +52,16 @@ export class SellerAuthComponent implements OnInit {
 
   loginSubmit() {
     this.seller.SellerLogin(this.LoginFrom.value).subscribe((res:any)=>{ 
-      console.log(res) 
+      console.log(res);
       this.seller.loginSetLocalSrorage(res);
-      this.name=this.seller.loginGetLocalStorage();
+      let localData= this.seller.loginGetLocalStorage();
+      if(localData.email===this.regEmail && localData.pwd===this.regPwd){
+        this.router.navigate(['/seller-home'])
+      }
+      else
+      {
+        alert('Invalid password')
+      }
     });
   }
  

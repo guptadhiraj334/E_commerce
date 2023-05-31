@@ -1,0 +1,61 @@
+<p>login works!</p>
+
+<div class="card" *ngIf="!showForm">
+    <div class="row">
+        <div class="col-md-6">
+            <mat-card>
+                <form [formGroup]="registrationForm">
+                    <div>
+                        <input type="text" class="form-control" formControlName="name" placeholder="Enter Name">
+                    </div>
+                    <div class="my-3">
+                        <input type="email" class="form-control" formControlName="email" placeholder="Enter Email">
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" formControlName="pwd" placeholder="Password">
+                    </div>
+                    <div class="my-3">
+                        <button color="primary" mat-raised-button (click)="SaveUser()"> Submit</button>
+                        <button class="mx-3" mat-raised-button style="background: red;color: white;"> Reset</button>
+                    </div>
+                    <div>
+                        <a (click)="register()">Already have account? Login</a>
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- User login Form -->
+
+<div class="card" *ngIf="showForm">
+    <div class="row">
+        <div class="col-md-6">
+            <mat-card>
+                <h1 class="d-flex justify-content-center">Login Here !!</h1>
+                <hr>
+                <form [formGroup]="LoginForm">
+                    <div>
+                        <input type="text" placeholder="email" formControlName="" class="form-control">
+                    </div>
+                    <div class="my-3">
+                        <input type="text" placeholder="password" formControlName="" class="form-control">
+                    </div>
+                    <div>
+                        <button mat-raised-button color="primary" (click)="LoggedIn()">Login</button>
+                    </div>
+                    <div class="my-2">
+                        <a (click)="display()"> don't have account? Register </a>
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+</div>

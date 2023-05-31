@@ -8,3 +8,8 @@ p{
     position: absolute;
     top: 11%;
 }
+
+.fa-pencil{
+    position: relative;
+    top: 10px;
+}

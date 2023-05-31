@@ -16,6 +16,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './folder/seller-home/seller-home.component';
 import { AddProductComponent } from './folder/add-product/add-product.component';
 import { CardComponent } from './card/card.component';
+import { SearchComponent } from './search/search.component';
+import { LoginComponent } from './folder/login/login.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { SellerUpdateProductComponent } from './folder/seller-update-product/seller-update-product.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,10 @@ import { CardComponent } from './card/card.component';
     SellerHomeComponent,
     AddProductComponent,
     CardComponent,
+    SearchComponent,
+    LoginComponent,
+    ProductDetailsComponent,
+    SellerUpdateProductComponent,
     
   ],
   imports: [

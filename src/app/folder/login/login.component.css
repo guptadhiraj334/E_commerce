@@ -1,0 +1,12 @@
+.card{
+    position: relative;
+    top: 5%;
+    padding: 20px;
+    background-color: rgba(7, 15, 120, 0.458);
+}
+
+mat-card{
+    width: 350px;
+    padding: 20px;
+    
+}

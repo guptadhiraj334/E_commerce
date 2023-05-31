@@ -12,17 +12,17 @@
       "id": 1
     },
     {
-      "name": null,
-      "email": null,
-      "number": null,
-      "pwd": null,
+      "name": "Ram",
+      "email": "ram@gmail.com",
+      "number": "",
+      "pwd": "Ram@123",
       "id": 2
     },
     {
-      "name": "Mani",
-      "email": "mani@gmail.com",
+      "name": "Dhiraj",
+      "email": "dhiraj@gmail.com",
       "number": null,
-      "pwd": "Mani@123",
+      "pwd": "Dhiraj@123",
       "id": 3
     }
   ],
@@ -30,76 +30,9 @@
     {
       "email": "guptadhiraj334@gmail.com",
       "pwd": "Dhiraj@123"
-    },
-    {
-      "email": "Raju@gmail.com",
-      "pwd": "Raju@123",
-      "id": 1
-    },
-    {
-      "email": "Ankit@gmail.com",
-      "pwd": "Ankit@123",
-      "id": 2
-    },
-    {
-      "email": "guptadhiraj@gmail.com",
-      "pwd": "Dhiraj@123",
-      "id": 3
-    },
-    {
-      "email": "guptadhiraj@gmail.com",
-      "pwd": "Dhiraj@123",
-      "id": 4
-    },
-    {
-      "email": "mani@gmail.com",
-      "pwd": "Mani@123",
-      "id": 5
-    },
-    {
-      "email": "mani@gmail.com",
-      "pwd": "Mani@123",
-      "id": 6
-    },
-    {
-      "email": "mani@gmail.com",
-      "pwd": "Mani@123",
-      "id": 7
-    },
-    {
-      "email": null,
-      "pwd": null,
-      "id": 8
     }
   ],
   "products": [
-    {
-      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      "price": "109",
-      "description": "Your perfect pack for everyday use and walks in the forest",
-      "category": "men's clothing",
-      "image": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81mmaolsY5L._UX522_.jpg",
-      "count": "120",
-      "id": "1"
-    },
-    {
-      "title": "Mens Casual Premium Slim Fit T-Shirts",
-      "price": "400",
-      "description": "The Henley style round neckline includes a three-button placket.",
-      "category": "men's clothing",
-      "image": "http://sc04.alicdn.com/kf/Had3fe864318741b9958d4d7c61906b75j.jpg",
-      "count": "40",
-      "id": "2"
-    },
-    {
-      "title": "White sneaker on a blue gradient",
-      "price": "350",
-      "description": "Your perfect pack for everyday use and walks in the forest",
-      "category": "Men's sneaker",
-      "image": "https://media.istockphoto.com/id/1303978937/photo/white-sneaker-on-a-blue-gradient-background-mens-fashion-sport-shoe-sneakers-lifestyle.jpg?s=612x612&w=0&k=20&c=L725fuzFTnm6qEaqE7Urc5q6IR80EgYQEjBn_qtBIQg=",
-      "count": "12",
-      "id": "4"
-    },
     {
       "title": "Smart Watches",
       "price": "3500",
@@ -108,6 +41,64 @@
       "image": "https://cdn.shopify.com/s/files/1/0266/1371/0884/products/pop2_black_bt_call.png?v=1669725227",
       "count": "15",
       "id": "5"
+    },
+    {
+      "title": "Infinix 10 pro",
+      "price": "18000",
+      "description": "India's fastest growing mobile ",
+      "category": "Electronics",
+      "image": "https://habarideals-prod-storage-4xrwybp0hhbu.s3.eu-west-2.amazonaws.com/habari-product-image-1645691838-95846.jpg",
+      "count": "2",
+      "id": "10"
+    },
+    {
+      "title": "Jeans",
+      "price": "700",
+      "description": "Jeans are a type of pants or trousers made from denim or dungaree cloth.",
+      "category": "Clothes",
+      "image": "https://www.mkt-jcpenney.com/prod/mkt/images/denim-fit-tool-0948a132-24ae-48c8-8fcd-3c8be4a00ed5.jpeg",
+      "count": "12",
+      "id": "11"
+    },
+    {
+      "title": "Shirts",
+      "price": "450",
+      "description": "Brands like Raymond shirts, Pepe shirts, Levi's shirts, Louis Philippe shirts and Van Heusen shirts have a range of stylish men's shirts in linen",
+      "category": "Clothes",
+      "image": "https://i.ebayimg.com/images/g/4vwAAOSwUpFjtoo3/s-l500.jpg",
+      "count": "20",
+      "id": "12"
+    }
+  ],
+  "User": [
+    {
+      "name": "Dhiraj gupta",
+      "email": "guptadhiraj334@gmail.com",
+      "pwd": "Dhiraj@123"
+    },
+    {
+      "name": "Pawan",
+      "email": "pawan@gmail.com",
+      "pwd": "Pawan@123",
+      "id": 1
+    },
+    {
+      "name": "Pinky",
+      "email": "pinky@gmail.com",
+      "pwd": "Pinky@123",
+      "id": 2
+    },
+    {
+      "name": "Dhiraj",
+      "email": "dhiraj@gmail.com",
+      "pwd": "Dhiraj@123",
+      "id": 3
+    },
+    {
+      "name": "Dhiraj",
+      "email": "dhiraj@gmail.com",
+      "pwd": "Dhiraj@123",
+      "id": 4
     }
   ]
 }

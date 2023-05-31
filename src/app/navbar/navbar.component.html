@@ -7,21 +7,31 @@
         </a>
       </h1>
     </div>
-    <div class="col-md-6 d-flex justify-content-center">
-      <input type="text" placeholder="Search ..." *ngIf="dataType==='default'">
-      <mat-icon *ngIf="dataType==='default'">search </mat-icon>
+    <div class="col-md-6 d-flex justify-content-center" >
+      <div  *ngIf="dataType==='default'" class="d-flex self-align-center">
+        <input type="text" #inputBox placeholder="Search ...">
+        <button class="fa fa-search" (click)=searchProducts(inputBox.value)></button>
+      </div>
     </div>
     <div class="col-md-4 " [ngSwitch]="dataType">
       <ul class="d-flex" *ngSwitchCase="'default'">
         <li><a routerLink="">Home</a> </li>
         <li><a routerLink="/seller-auth">Seller</a> </li>
-        <li><a >Login</a> </li>
-        <li><a >Card</a> </li>
+        <li><a routerLink="/login">Login</a> </li>
+        <li><a routerLink="/card">Card</a> </li>
       </ul>
+        
+      <ul class="d-flex" *ngSwitchCase="'user'">
+        <li><a routerLink="">Home</a> </li>
+        <li><a >{{userName | uppercase}} </a> </li>
+        <li><a (click)="userLogout()">Log-out</a> </li>
+        <li><a routerLink="/card">Card</a> </li>
+      </ul>
+
       <ul class="d-flex" *ngSwitchCase="'seller'">
-        <li><a>Seller</a> </li>
-        <li><a routerLink="/seller-home" >Product list</a> </li>
-        <li><a routerLink="/add-product">Add </a> </li>
+        <li><a>{{sellerName}}  </a> </li>
+        <li><a routerLink="/seller-home">Product list</a> </li>
+        <li><a routerLink="/add-product"> Add </a> </li>
         <li><a (click)="logOut()">Logout</a> </li>
       </ul>
     </div>

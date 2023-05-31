@@ -1,0 +1,40 @@
+
+.productData {
+    position: relative;
+    width: 100%;
+    top: 68px;
+    object-fit: contain;
+    height: 350px;
+    padding: 30px;
+}
+
+.btn{
+    display: flex;
+    flex-direction: column;
+    width:150px;
+}
+
+.product-img{
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.product-description h1,h2{
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+
+.product-description {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.product-description h4{
+    font-weight: 550;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+

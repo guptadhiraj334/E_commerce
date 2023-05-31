@@ -23,9 +23,9 @@
                 <td>{{product.category}} </td>
                 <td><img src="{{product.image}}" alt="" width="120px" height="150px"></td>
                 <td>{{product.count}}</td>
-                <td>
-                    <button mat-fab><mat-icon>delete</mat-icon> </button>
-                    <button mat-fab><mat-icon>update</mat-icon> </button>
+                <td  style="flex-direction: column;" class="my-3">
+                    <button mat-mini-fab style="background:red;" (click)="Delete(product.id)" class="mx-3 my-3" class="fa fa-trash"> </button>
+                    <button mat-mini-fab class="mx-3 " color="primary" routerLink="/update-product/{{product.id}}" class="fa fa-pencil"> </button>
                 </td>
             </tr>
         </tbody>

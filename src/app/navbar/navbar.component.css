@@ -11,14 +11,22 @@ input{
     outline: none;
 }
 
-mat-icon{
+/* mat-icon{
+    display: flex;
+    position: relative;
+    right: 35px;
+    background: transparent;
+} */
+
+button{
     display: flex;
     position: relative;
     right: 35px;
     align-self: center;
     background: transparent;
+    border: none;
+    cursor: pointer;
 }
-
    ul li{
     list-style: none;
 }

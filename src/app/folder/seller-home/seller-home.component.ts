@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/Allservices/product.service';
-import { SellerService } from 'src/app/Allservices/seller.service';
 
 @Component({
   selector: 'app-seller-home',
@@ -13,6 +12,12 @@ export class SellerHomeComponent implements OnInit {
 
   constructor(private prod:ProductService) {
     this.prod.getProducts().subscribe((res)=>{this.products=res,console.log(res)});
+   }
+
+   Delete(id){
+    this.prod.deleteProduct(id).subscribe((res)=>{console.log(res)});
+     window.location.reload();
+    
    }
 
   ngOnInit(): void {

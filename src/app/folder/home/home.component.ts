@@ -10,11 +10,14 @@ import { SellerService } from 'src/app/Allservices/seller.service';
 export class HomeComponent implements OnInit {
  
   products:any;
+  getProducts:any
   constructor(private home:ProductService) { 
     this.home.limitProduct().subscribe((res)=>{this.products=res,console.log(res)})
+    this.home.getProducts().subscribe((res)=>{this.getProducts=res,console.log(res)});
   }
 
   ngOnInit(): void {
+    
   }
 
 }

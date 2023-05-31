@@ -10,7 +10,7 @@ export class ProductService {
   constructor(private http:HttpClient) { }
 
   getProducts(){
-    return this.http.get(`http://localhost:3000/products`);
+    return this.http.get<products[]>(`http://localhost:3000/products`);
   }
 
   addpProducts(body:products){
@@ -19,5 +19,21 @@ export class ProductService {
 
   limitProduct(){
     return this.http.get(` http://localhost:3000/products?_limit=3`)
+  }
+
+  deleteProduct(id){
+    return this.http.delete(`http://localhost:3000/products/`+id)
+  }
+
+  getProductById(id:string){
+    return this.http.get<products[]>(`http://localhost:3000/products/${id}`)
+  }
+
+  updateProduct(product:any,id:any){
+    return this.http.put(`http://localhost:3000/products/${id}`,product)
+  }
+
+  searchProduct(query:string){
+    return this.http.get<products>(`http://localhost:3000/products?q=${query}`)
   }
 }

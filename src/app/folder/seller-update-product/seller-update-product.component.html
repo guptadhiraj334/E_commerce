@@ -1,0 +1,35 @@
+<p>seller-update-product works!</p>
+
+<p>add-product works!</p>
+<mat-card class="mat" >
+    <mat-card >
+     <h1 style="font-weight: 550;color: rgb(228, 9, 228);">Update Products</h1> 
+        <form [formGroup]="updateForm" >
+            <div class="my-3">
+                <input type="text" placeholder="id" formControlName="id" class="form-control">
+            </div>
+            <div >
+                <input type="text" placeholder="Title" formControlName="title" class="form-control">
+            </div>
+            <div class="my-3">
+                <input type="text" placeholder="Price" formControlName="price" class="form-control">
+            </div>
+            <div>
+                <input type="text" placeholder="Description" formControlName="description" class="form-control">
+            </div>
+            <div class="my-3">
+                <input type="text" placeholder="Category" formControlName="category" class="form-control">
+            </div>
+            <div>
+                <input type="text" placeholder="Count" formControlName="count" class="form-control">
+            </div>
+            <div class="my-3">
+                <input type="text" placeholder="Image url" formControlName="image" class="form-control">
+            </div>
+            <div>
+                <button mat-raised-button color="primary" (click)="Submit()" routerLink="/seller-home"> Submit</button>
+                <button mat-raised-button style="background: red;color: white; " class="mx-3" (click)="reset()"> remove</button>
+            </div>
+        </form>
+    </mat-card>
+</mat-card>

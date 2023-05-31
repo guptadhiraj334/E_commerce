@@ -2,10 +2,12 @@
     <div class="row">
         <div class="col-md-6">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" >
+                <div class="carousel-inner">
                     <div class="carousel-item active" *ngFor="let pro of products" data-bs-interval="1000">
-                        <img src="{{pro.image}} "
-                            class="img w-100 " alt="..." width="300px" height="400px">
+                        <a routerLink="/details/{{pro.id}} ">
+                            <img src="{{pro.image}} " class="img w-100 " alt="..." width="300px" height="400px">
+                        </a>
+
                     </div>
                 </div>
                 <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -20,26 +22,44 @@
                 </button> -->
             </div>
         </div>
-        <div class="col-md-6 d-flex p-5" style="background: pink;"> 
+        <div class="col-md-6 d-flex p-5" style="background: pink;">
             <mat-card style="width: 250px;">
                 <mat-card-content>
-                    <img src="https://cdn.pixabay.com/photo/2017/04/03/15/52/mobile-phone-2198770_960_720.png" alt="" width="220px" >
-                </mat-card-content> <hr>
+                    <img src="https://cdn.pixabay.com/photo/2017/04/03/15/52/mobile-phone-2198770_960_720.png" alt=""
+                        width="220px">
+                </mat-card-content>
+                <hr>
                 <mat-card-footer>
                     <h1 class="mx-3">Apple i-phone</h1>
                     <h3 class="mx-3">Up to 20% Off</h3>
                 </mat-card-footer>
             </mat-card>
 
-            <mat-card  class="mx-5">
+            <mat-card class="mx-5">
                 <mat-card-content>
-                    <img src="https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_960_720.jpg" alt="" width="220px">
-                </mat-card-content> <hr>
+                    <img src="https://cdn.pixabay.com/photo/2016/11/19/18/06/feet-1840619_960_720.jpg" alt=""
+                        width="220px">
+                </mat-card-content>
+                <hr>
                 <mat-card-footer>
                     <h1 class="mx-3">Nike</h1>
                     <h3 class="mx-3">Up to 30% Off</h3>
                 </mat-card-footer>
             </mat-card>
         </div>
+    </div>
+    <div class="row  my-4">
+        <mat-card *ngFor="let product of getProducts" style="width: 290px;" class="mx-2 my-2">
+            <mat-card-content class="d-flex">
+                <img src="{{product.image}} " alt="" width="280px" height="250px">
+            </mat-card-content>
+            <mat-card-footer style="margin-left: 5px;">
+                <h2> Price : {{product.price}} </h2>
+
+                <div>
+                    <a routerLink="/details/{{product.id}} ">View product</a>
+                </div>
+            </mat-card-footer>
+        </mat-card>
     </div>
 </div>

@@ -1,0 +1,20 @@
+<div class="row productData" *ngIf="productData">
+    <div class="col-sm-6">
+        <img src="{{productData.image}} " alt="" class="product-img">
+    </div>
+    <div class="col-sm-6 my-5 product-description">
+        <h1 >{{productData.title}} </h1>
+        <h2> Price : {{productData.price}} </h2>
+        <h4>Category :{{productData.category}} </h4>
+        <div class="btn m-0">
+            <button mat-raised-button style="background: yellow;">Add to Cart</button>
+            <button mat-raised-button class="my-3 " color="accent">Buy Now</button>
+        </div>
+        <div class="quantity my-2">
+            <button class="mx-1" (click)="productIncrease('min')">-</button>
+            <input type="text" value="{{productQuantity}} " style="width: 40px;" disabled>
+            <button class="mx-1" (click)="productIncrease('plus')">+</button>
+
+        </div>
+    </div>
+</div>
